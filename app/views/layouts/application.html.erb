@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>TaskAdd2</title>
+    <title>TaskAdd</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -11,6 +11,18 @@
   </head>
 
   <body>
+    <header>
+     <h1>Ruby on Railsスケジュール管理アプリ</h1>
+    </header>
     <%= yield %>
+    <footer>
+     <% case controller.action_name %>
+     <% when "index" %>
+     <%= render"shared/partial" %>
+     <% else %>
+     <%= render"shared/partial2"%>
+     <% end %>
+     
+    </footer>
   </body>
 </html>

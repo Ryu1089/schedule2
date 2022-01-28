@@ -1,0 +1,18 @@
+
+<h1>
+  
+  <span id="time"></span>
+  <span id="total">スケジュール合計:<%= @users.count %></span>
+  
+</h1> 
+
+<script type="text/javascript">
+  
+  var now = new Date();
+	var year = now.getFullYear();
+	var month = now.getMonth()+1; 
+	var day = now.getDate();
+
+	document.getElementById("time").innerHTML = "現在の日時:" +year + "年" + month + "月" + day + "日"; 
+
+</script>
